@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact Gouri">
+    <meta name="author" content="Gouri">
+
+    <title>Gouri | Contact</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Gouri</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="cv.html">CV</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html">Projects</a>
+            <a href="activities.html">Activities</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Contact Me</h2>
+
+            <p>
+                If you would like to get in touch with me, you can
+                use the form below.
+            </p>
+
+
+            <!-- Contact Form -->
+
+            <form>
+
+                <label for="name">Name:</label>
+                <br>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required>
+
+                <br><br>
+
+
+                <label for="email">Email:</label>
+                <br>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <br><br>
+
+
+                <label>Preferred Contact Method:</label>
+                <br>
+
+                <input type="radio"
+                       id="email-contact"
+                       name="contact"
+                       value="email">
+
+                <label for="email-contact">Email</label>
+
+                <input type="radio"
+                       id="phone-contact"
+                       name="contact"
+                       value="phone">
+
+                <label for="phone-contact">Phone</label>
+
+                <br><br>
+
+
+                <input type="checkbox"
+                       id="updates"
+                       name="updates">
+
+                <label for="updates">
+                    I would like to receive updates.
+                </label>
+
+                <br><br>
+
+
+                <label for="message">Message:</label>
+                <br>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          cols="30"
+                          placeholder="Enter your message">
+                </textarea>
+
+                <br><br>
+
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+
+            <!-- Embedded Content -->
+
+            <h3>My Location</h3>
+
+            <iframe
+                src="https://www.google.com/maps?q=Kerala,India&output=embed"
+                width="400"
+                height="250"
+                title="Map showing Kerala, India">
+            </iframe>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Gouri | Personal Portfolio</p>
+    </footer>
+
+</body>
+
+</html>
