@@ -44,80 +44,35 @@
 
             <!-- Contact Form -->
 
-            <form>
+           <form id="contactForm">
 
-                <label for="name">Name:</label>
-                <br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
 
-                <input type="text"
-                       id="name"
-                       name="name"
-                       placeholder="Enter your name"
-                       required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
 
-                <br><br>
+    <label>Preferred Contact Method:</label>
 
+    <input type="radio" id="contactEmail" name="contact" value="email">
+    <label for="contactEmail">Email</label>
 
-                <label for="email">Email:</label>
-                <br>
+    <input type="radio" id="contactPhone" name="contact" value="phone">
+    <label for="contactPhone">Phone</label>
 
-                <input type="email"
-                       id="email"
-                       name="email"
-                       placeholder="Enter your email"
-                       required>
+    <br>
 
-                <br><br>
+    <input type="checkbox" id="updates" name="updates">
+    <label for="updates">I would like to receive updates.</label>
 
+    <br><br>
 
-                <label>Preferred Contact Method:</label>
-                <br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
 
-                <input type="radio"
-                       id="email-contact"
-                       name="contact"
-                       value="email">
+    <button type="submit">Send Message</button>
 
-                <label for="email-contact">Email</label>
-
-                <input type="radio"
-                       id="phone-contact"
-                       name="contact"
-                       value="phone">
-
-                <label for="phone-contact">Phone</label>
-
-                <br><br>
-
-
-                <input type="checkbox"
-                       id="updates"
-                       name="updates">
-
-                <label for="updates">
-                    I would like to receive updates.
-                </label>
-
-                <br><br>
-
-
-                <label for="message">Message:</label>
-                <br>
-
-                <textarea id="message"
-                          name="message"
-                          rows="5"
-                          cols="30"
-                          placeholder="Enter your message">
-                </textarea>
-
-                <br><br>
-
-
-                <button type="submit">Send Message</button>
-
-            </form>
-
+</form>
 
             <!-- Embedded Content -->
 
