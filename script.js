@@ -40,40 +40,78 @@ profileImage.addEventListener("mouseout", () => {
 });
 
 
-// 4. CONTACT FORM VALIDATION
+// Contact Form Validation
+
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", (event) => {
+    contactForm.addEventListener("submit", function(event) {
 
+        // Stop the form from submitting/reloading
         event.preventDefault();
 
+        // Get values from the form
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
 
+        // Get span elements
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+        const successMessage = document.getElementById("successMessage");
+
+        // Clear previous messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+        successMessage.textContent = "";
+
+        let valid = true;
+
+        // Name validation
+        if (name === "") {
+            nameError.textContent = " Please enter your name.";
+            nameError.style.color = "red";
+            valid = false;
+        }
+
+        // Email validation
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (name === "") {
-            alert("Please enter your name.");
-            return;
+        if (email === "") {
+            emailError.textContent = " Please enter your email.";
+            emailError.style.color = "red";
+            valid = false;
+        }
+        else if (!emailPattern.test(email)) {
+            emailError.textContent = " Please enter a valid email address.";
+            emailError.style.color = "red";
+            valid = false;
         }
 
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            return;
-        }
-
+        // Message validation
         if (message === "") {
-            alert("Please enter your message.");
-            return;
+            messageError.textContent = " Please enter your message.";
+            messageError.style.color = "red";
+            valid = false;
         }
 
-        alert(`Thank you, ${name}! Your message has been validated successfully.`);
+        // Successful submission
+        if (valid) {
 
-        contactForm.reset();
+            successMessage.textContent =
+                ` Thank you, ${name}! Your message has been validated successfully.`;
+
+            successMessage.style.color = "green";
+            successMessage.style.display = "block";
+
+            contactForm.reset();
+        }
+
     });
+
 }
 
 
