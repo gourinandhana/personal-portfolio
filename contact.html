@@ -15,9 +15,11 @@
 
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>Gouri</h1>
+        <h1>Portfolio</h1>
 
+        <!-- Navigation -->
         <nav>
             <a href="index.html">Home</a>
             <a href="profile.html">Profile</a>
@@ -30,70 +32,113 @@
     </header>
 
 
+    <!-- Main Content -->
     <main>
 
         <section>
 
             <h2>Contact Me</h2>
 
-            <p>
-                If you would like to get in touch with me, you can
-                use the form below.
-            </p>
+            <form id="contactForm">
+
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                >
+
+                <br><br>
 
 
-            <!-- Contact Form -->
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                >
 
-           <form id="contactForm">
+                <br><br>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name">
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email">
+                <!-- Preferred Contact Method -->
+                <p>Preferred Contact Method:</p>
 
-    <label>Preferred Contact Method:</label>
+                <input
+                    type="radio"
+                    id="contactEmail"
+                    name="contact"
+                    value="email"
+                >
 
-    <input type="radio" id="contactEmail" name="contact" value="email">
-    <label for="contactEmail">Email</label>
+                <label for="contactEmail">Email</label>
 
-    <input type="radio" id="contactPhone" name="contact" value="phone">
-    <label for="contactPhone">Phone</label>
+                <br>
 
-    <br>
+                <input
+                    type="radio"
+                    id="contactPhone"
+                    name="contact"
+                    value="phone"
+                >
 
-    <input type="checkbox" id="updates" name="updates">
-    <label for="updates">I would like to receive updates.</label>
+                <label for="contactPhone">Phone</label>
 
-    <br><br>
+                <br><br>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
 
-    <button type="submit">Send Message</button>
+                <!-- Updates -->
+                <input
+                    type="checkbox"
+                    id="updates"
+                    name="updates"
+                >
 
-</form>
+                <label for="updates">
+                    I would like to receive updates.
+                </label>
 
-            <!-- Embedded Content -->
+                <br><br>
 
-            <h3>My Location</h3>
 
-            <iframe
-                src="https://www.google.com/maps?q=Kerala,India&output=embed"
-                width="400"
-                height="250"
-                title="Map showing Kerala, India">
-            </iframe>
+                <!-- Message -->
+                <label for="message">Message:</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Enter your message"
+                ></textarea>
+
+                <br><br>
+
+
+                <!-- Submit Button -->
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
 
         </section>
 
     </main>
 
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Gouri | Personal Portfolio</p>
     </footer>
-<script src="script.js"></script>
+
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>
